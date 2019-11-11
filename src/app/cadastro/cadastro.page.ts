@@ -29,5 +29,6 @@ export class CadastroPage implements OnInit {
     this.banco.list("Administrador").push(this.adm);
     this.adm = new Adm();
     this.router.navigate(['cadastro']);
+    alert("Cadastro feito com sucesso!");
   }
 }
