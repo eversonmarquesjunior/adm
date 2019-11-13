@@ -7,6 +7,7 @@ const routes: Routes = [
   { path: 'cadastro', loadChildren: './cadastro/cadastro.module#CadastroPageModule' },
   { path: 'destino', loadChildren: './destino/destino.module#DestinoPageModule' },
   { path: 'mensagem', loadChildren: './mensagem/mensagem.module#MensagemPageModule' },
+  { path: 'redefinicao', loadChildren: './redefinicao/redefinicao.module#RedefinicaoPageModule' },
 ];
 
 @NgModule({

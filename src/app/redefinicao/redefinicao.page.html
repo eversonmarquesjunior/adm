@@ -1,0 +1,22 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Redefinição de Senha</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="ion-padding">
+
+  <ion-item>
+    <ion-label position="floating"> Digite seu email: </ion-label>
+    <ion-input type="text" [(ngModel)] = "adm.email"></ion-input>
+  </ion-item>
+
+  <br />
+
+  <ion-button expand= "block" color="secondary" (click) = "redefinir()">
+  <ion-text color="dark">Redefinir</ion-text>
+</ion-button>
+
+</div>
+</ion-content>
