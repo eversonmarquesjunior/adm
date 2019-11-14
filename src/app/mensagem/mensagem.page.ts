@@ -13,8 +13,7 @@ import { Router } from '@angular/router';
 export class MensagemPage implements OnInit {
   aviso : Aviso = new Aviso();
 
-  constructor(private banco : AngularFireDatabase, private autenticacao : AngularFireAuth, private warn : AlertController, private router : Router) { 
-    this.aviso.adm.nome = this.autenticacao.auth.currentUser.email;
+  constructor(private banco : AngularFireDatabase, private autenticacao : AngularFireAuth, private warn : AlertController, private router : Router) {
   }
 
   ngOnInit() {
@@ -27,13 +26,14 @@ export class MensagemPage implements OnInit {
       buttons : [{
         text : 'Sim',
         handler : () =>{
+          this.aviso.adm.nome = this.autenticacao.auth.currentUser.email;
           this.banco.list("Mensagem").push(this.aviso);
           this.router.navigate(['destino']);
         }
       },{
         text : 'Não'
       }]
-      
+
     });
     await alert.present();
   }
