@@ -12,13 +12,19 @@ import { Router } from '@angular/router';
 })
 export class MensagemPage implements OnInit {
   aviso : Aviso = new Aviso();
-
+  tipo_aviso : string;
   constructor(private banco : AngularFireDatabase, private autenticacao : AngularFireAuth, private warn : AlertController, private router : Router) {
   }
 
   ngOnInit() {
   }
-
+tipoMensagem(tipo){
+  if(tipo == 1){
+    this.aviso.tipo = "Aviso"
+  }else if(tipo == 2){
+    this.aviso.tipo = "Solicitação para Liberação"
+  }
+}
   async enviarMensagem(){
     const alert = await this.warn.create({
       header : 'Aviso',

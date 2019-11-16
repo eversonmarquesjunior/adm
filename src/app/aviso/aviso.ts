@@ -5,5 +5,6 @@ export class Aviso{
     mensagem : string;
     telefone : string;
     adm : Adm = new Adm();
+    tipo : string;
     key : any;
 }

@@ -6,7 +6,23 @@
 
 <ion-content>
   <div class="ion-padding">
-
+      <ion-list>
+          <ion-radio-group (ionChange) = "tipoMensagem()">
+            <ion-list-header>
+              Tipo de Aviso
+            </ion-list-header>
+        
+            <ion-item>
+              <ion-label>Aviso</ion-label>
+              <ion-radio value="Aviso" (click) = tipoMensagem(1) ></ion-radio>
+            </ion-item>
+        
+            <ion-item>
+              <ion-label>Solicitação para Liberação</ion-label>
+              <ion-radio value="Solicitacao" (click) = tipoMensagem(2)></ion-radio>
+            </ion-item>
+        </ion-radio-group>
+        </ion-list>
     <ion-item>
       <ion-label position="floating">Numero do Receptor:</ion-label>
       <br>
