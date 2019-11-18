@@ -8,6 +8,7 @@ const routes: Routes = [
   { path: 'destino', loadChildren: './destino/destino.module#DestinoPageModule' },
   { path: 'mensagem', loadChildren: './mensagem/mensagem.module#MensagemPageModule' },
   { path: 'redefinicao', loadChildren: './redefinicao/redefinicao.module#RedefinicaoPageModule' },  { path: 'opcoes', loadChildren: './opcoes/opcoes.module#OpcoesPageModule' },
+  { path: 'turmas', loadChildren: './turmas/turmas.module#TurmasPageModule' },
 
 ];
 

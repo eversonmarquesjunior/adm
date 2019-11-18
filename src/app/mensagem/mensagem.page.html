@@ -11,12 +11,12 @@
             <ion-list-header>
               Tipo de Aviso
             </ion-list-header>
-        
+
             <ion-item>
               <ion-label>Aviso</ion-label>
               <ion-radio value="Aviso" (click) = tipoMensagem(1) ></ion-radio>
             </ion-item>
-        
+
             <ion-item>
               <ion-label>Solicitação para Liberação</ion-label>
               <ion-radio value="Solicitacao" (click) = tipoMensagem(2)></ion-radio>
@@ -40,6 +40,10 @@
 
     <ion-button expand="block" color="secondary" (click)="enviarMensagem()">
       <ion-text color="dark"> Enviar </ion-text>
+    </ion-button>
+
+    <ion-button expand="block" color="secondary" href="opcoes">
+      <ion-text color="dark"> Voltar </ion-text>
     </ion-button>
 
   </div>
