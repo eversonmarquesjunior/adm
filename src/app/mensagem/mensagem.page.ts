@@ -18,6 +18,7 @@ export class MensagemPage implements OnInit {
 
   ngOnInit() {
   }
+
 tipoMensagem(tipo){
   if(tipo == 1){
     this.aviso.tipo = "Aviso"
@@ -25,6 +26,7 @@ tipoMensagem(tipo){
     this.aviso.tipo = "Solicitação para Liberação"
   }
 }
+
   async enviarMensagem(){
     const alert = await this.warn.create({
       header : 'Aviso',
